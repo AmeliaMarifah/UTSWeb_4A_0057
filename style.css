@@ -1,0 +1,37 @@
+:root {
+  --pink:      #F2A7B8;
+  --pink-dark: #D97F97;
+  --peach:     #F7C5A0;
+  --cream:     #FFF7F0;
+  --sage:      #B5C9B1;
+  --text:      #2E2025;
+  --muted:     #7A6570;
+  --white:     #FFFFFF;
+  --card-bg:   #FFFBF8;
+  --border:    rgba(242,167,184,0.25);
+  --radius:    18px;
+  --transition: .35s cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+html { 
+    scroll-behavior: smooth; 
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+h1,h2,h3,h4 { 
+    font-family: 'Playfair Display', serif; 
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
