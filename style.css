@@ -13,6 +13,19 @@
   --transition: .35s cubic-bezier(.4,0,.2,1);
 }
 
+[data-theme="dark"] {
+  --pink:      #D97F97;
+  --pink-dark: #B85E78;
+  --peach:     #C4895E;
+  --cream:     #1A1216;
+  --sage:      #6E8B6A;
+  --text:      #F5EDF0;
+  --muted:     #B09AA0;
+  --white:     #251820;
+  --card-bg:   #2D1F25;
+  --border:    rgba(217,127,151,0.2);
+}
+
 *, *::before, *::after { 
     box-sizing: border-box; 
     margin: 0; 
