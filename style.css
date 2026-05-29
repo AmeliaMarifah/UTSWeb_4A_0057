@@ -73,13 +73,11 @@ a {
   color: var(--text); 
   font-style: normal; 
 }
-
 .nav-links { 
   display: flex; 
   gap: 28px; 
   align-items: center; 
 }
-
 .nav-links a {
   font-size: .85rem; 
   font-weight: 500; 
@@ -87,11 +85,9 @@ a {
   color: var(--muted); 
   transition: color var(--transition);
 }
-
 .nav-links a:hover { 
   color: var(--pink-dark); 
 }
-
 #toggle-theme {
   background: none; border: 1.5px solid var(--border);
   border-radius: 50px; 
@@ -99,19 +95,17 @@ a {
   font-size: .8rem; font-weight: 500; color: var(--text);
   transition: all var(--transition);
 }
-
 #toggle-theme:hover { 
   background: var(--pink); color: var(--white); 
   border-color: var(--pink); 
 }
-
 .hamburger { 
   display: none; flex-direction: column; 
   gap: 5px; cursor: pointer; 
 }
-
 .hamburger span { 
   width: 22px; height: 2px; 
   background: var(--text); border-radius: 2px; 
   transition: all var(--transition); 
 }
+
