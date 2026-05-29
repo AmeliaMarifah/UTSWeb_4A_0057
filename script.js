@@ -93,6 +93,13 @@ function renderProducts(cat = 'all') {
   });
 }
 
+function filterProducts(cat, btn) {
+  $('.filter-btn').removeClass('active');
+  $(btn).addClass('active');
+
+  renderProducts(cat);
+}
+
 function animateCounter(id, target, suffix = '') {
   let start = 0;
 
