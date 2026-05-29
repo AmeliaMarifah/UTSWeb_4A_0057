@@ -63,7 +63,7 @@ const products = [
   }
 ];
 
-
+let currentProduct = null;
 
 function renderProducts(cat = 'all') {
   $('#products-grid').html('');
@@ -98,6 +98,53 @@ function filterProducts(cat, btn) {
   $(btn).addClass('active');
 
   renderProducts(cat);
+}
+
+function openModal(product) {
+  currentProduct = product;
+
+  $('#m-emoji').text(product.emoji);
+  $('#m-name').text(product.name);
+  $('#m-cat').text(product.cat.toUpperCase());
+  $('#m-price').text(product.price);
+  $('#m-desc').text(product.desc);
+
+  $('#m-tags').html(
+    product.tags.map(t => `<span>${t}</span>`).join('')
+  );
+
+  $('#modal').addClass('active');
+
+  $('body').css('overflow', 'hidden');
+}
+
+function closeModalDirect() {
+  $('#modal').removeClass('active');
+  $('body').css('overflow', '');
+}
+
+function closeModal(e) {
+  if ($(e.target).attr('id') === 'modal') {
+    closeModalDirect();
+  }
+}
+
+function orderProduct() {
+  closeModalDirect();
+
+  const cat = currentProduct?.cat || '';
+
+  $('#f-need').val(
+    cat.charAt(0).toUpperCase() + cat.slice(1)
+  );
+
+  $('#f-msg').val(
+    `Halo! Saya ingin pesan "${currentProduct?.name}".`
+  );
+
+  $('#contact')[0].scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function animateCounter(id, target, suffix = '') {
