@@ -92,5 +92,18 @@
   </div>
 </section>
 
+<section id="products" style="padding-top:0">
+  <span class="section-label">Koleksi</span>
+  <h2 class="section-title">Pilih Buket<br>Favoritmu</h2>
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-cat="all" onclick="filterProducts('all', this)">Semua</button>
+    <button class="filter-btn" data-cat="wisuda" onclick="filterProducts('wisuda', this)">Wisuda</button>
+    <button class="filter-btn" data-cat="anniversary" onclick="filterProducts('anniversary', this)">Anniversary</button>
+    <button class="filter-btn" data-cat="birthday" onclick="filterProducts('birthday', this)">Birthday</button>
+    <button class="filter-btn" data-cat="valentines" onclick="filterProducts('valentines', this)">Valentine</button>
+  </div>
+  <div class="products-grid" id="products-grid"></div>
+</section>
+
 </body>
 </html>
