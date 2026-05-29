@@ -109,3 +109,93 @@ a {
   transition: all var(--transition); 
 }
 
+#hero {
+  min-height: 100vh; max-width: 100%;
+  display: flex; align-items: center; 
+  justify-content: center;
+  padding: 120px 24px 80px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(242,167,184,.22) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 50% at 20% 70%, rgba(247,197,160,.18) 0%, transparent 70%),
+              var(--cream);
+  transition: background var(--transition);
+}
+.hero-blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: .4; pointer-events: none;
+}
+.blob-1 { 
+  width: 420px; height: 420px; 
+  background: var(--pink); top: -80px; 
+  right: -60px; 
+  animation: float 7s ease-in-out infinite; 
+}
+.blob-2 { 
+  width: 280px; height: 280px; 
+  background: var(--peach); bottom: 60px; 
+  left: -40px; 
+  animation: float 9s ease-in-out infinite reverse; 
+}
+@keyframes float { 
+  0%,100%{transform:translateY(0)} 50%{transform:translateY(-24px)} 
+}
+.hero-inner { 
+  position: relative; z-index: 1; 
+  text-align: center; max-width: 700px; 
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(242,167,184,.18); 
+  border: 1px solid var(--border);
+  border-radius: 50px; padding: 6px 18px;
+  font-size: .78rem; font-weight: 500; 
+  letter-spacing: .08em;
+  color: var(--pink-dark); margin-bottom: 28px;
+  animation: fadeUp .8s ease both;
+}
+.hero-eyebrow::before { 
+  content: '✿'; 
+}
+.hero-h1 {
+  font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.05;
+  margin-bottom: 20px;
+  animation: fadeUp .8s .15s ease both;
+}
+.hero-h1 em { 
+  color: var(--pink-dark); font-style: italic; 
+}
+.hero-desc {
+  color: var(--muted); font-size: 1.05rem; 
+  line-height: 1.7;
+  max-width: 480px; margin: 0 auto 36px;
+  animation: fadeUp .8s .3s ease both;
+}
+.hero-cta { 
+  display: flex; gap: 14px; justify-content: center; 
+  flex-wrap: wrap; animation: fadeUp .8s .45s ease both; 
+}
+.hero-flowers {
+  display: flex; justify-content: center; 
+  gap: 10px; margin-top: 60px; flex-wrap: wrap;
+  animation: fadeUp .8s .6s ease both;
+}
+.flower-pill {
+  background: var(--card-bg); 
+  border: 1px solid var(--border);
+  border-radius: 50px; padding: 8px 18px; font-size: .8rem;
+  color: var(--muted); transition: all var(--transition);
+}
+.flower-pill:hover { 
+  background: var(--pink); color: #fff; 
+  border-color: var(--pink); transform: scale(1.05); 
+}
+@keyframes fadeUp { 
+  from { 
+    opacity:0; transform:translateY(24px); 
+  } to { 
+    opacity:1; transform:none; 
+  } 
+}
