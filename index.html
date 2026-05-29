@@ -105,5 +105,20 @@
   <div class="products-grid" id="products-grid"></div>
 </section>
 
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <span class="modal-emoji" id="m-emoji"></span>
+    <div class="modal-name"  id="m-name"></div>
+    <div class="modal-tag"   id="m-cat"></div>
+    <div class="modal-price" id="m-price"></div>
+    <div class="modal-desc"  id="m-desc"></div>
+    <div class="modal-tags"  id="m-tags"></div>
+    <button class="btn-primary-pp" style="width:100%;margin-top:20px" onclick="orderProduct()">
+      Pesan Sekarang →
+    </button>
+  </div>
+</div>
+
 </body>
 </html>
