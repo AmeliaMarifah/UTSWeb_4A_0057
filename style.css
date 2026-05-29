@@ -109,6 +109,30 @@ a {
   transition: all var(--transition); 
 }
 
+.btn-primary-pp {
+  background: var(--pink-dark); color: #fff;
+  border: none; border-radius: 50px; padding: 14px 32px;
+  font-size: .9rem; font-weight: 500; cursor: pointer;
+  transition: all var(--transition); 
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-primary-pp:hover { 
+  background: var(--text); transform: translateY(-2px); 
+}
+.btn-outline-pp {
+  background: transparent; color: var(--text);
+  border: 1.5px solid var(--border); 
+  border-radius: 50px; padding: 14px 32px;
+  font-size: .9rem; font-weight: 500; cursor: pointer;
+  transition: all var(--transition); 
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-outline-pp:hover { 
+  border-color: var(--pink); 
+  color: var(--pink-dark); 
+  transform: translateY(-2px); 
+}
+
 #hero {
   min-height: 100vh; max-width: 100%;
   display: flex; align-items: center; 
