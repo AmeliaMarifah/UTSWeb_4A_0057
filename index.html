@@ -301,6 +301,84 @@
   </div>
 </section>
 
+<div id="contact">
+  <div class="inner">
+    <div class="contact-info">
+      <span class="section-label">Kontak</span>
+      <h2 class="section-title">Yuk, Wujudkan<br>Buket Impianmu ✿</h2>
+      <p>Punya pertanyaan atau mau custom order? Isi form di samping atau hubungi kami langsung.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div class="contact-detail">
+            <strong>Alamat</strong>
+            <span>Lopang, Kembangbahu, Lamongan, Jawa Timur</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📱</span>
+          <div class="contact-detail">
+            <strong>WhatsApp</strong>
+            <span>+62 831-3107-4787</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-detail">
+            <strong>Email</strong>
+            <span>hello@petitepetal.id</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div class="contact-detail">
+            <strong>Jam Operasional</strong>
+            <span>Senin–Sabtu, 08.00–20.00 WIB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Nama</label>
+            <input type="text" id="f-name" placeholder="Nama kamu" required/>
+          </div>
+          <div class="form-field">
+            <label>No. HP / WA</label>
+            <input type="tel" id="f-phone" placeholder="+62..." required/>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Keperluan</label>
+          <select id="f-need">
+            <option>Wisuda</option>
+            <option>Anniversary</option>
+            <option>Birthday</option>
+            <option>Valentine</option>
+            <option>Custom / Lainnya</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Pesan / Deskripsi</label>
+          <textarea id="f-msg" placeholder="Ceritakan konsep buket impianmu…"></textarea>
+        </div>
+        <div id="notif">✅ Pesanmu terkirim! Kami akan segera menghubungimu.</div>
+        <button type="submit" class="btn-primary-pp" style="width:100%; padding:14px">
+          Kirim Pesan →
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Made with <span>✿</span> by <strong>Petite Petal</strong>
+  — Buket Kekinian untuk Momen Spesialmu &copy; 2025
+</footer>
+
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModalDirect()">✕</button>
