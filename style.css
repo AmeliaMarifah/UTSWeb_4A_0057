@@ -564,6 +564,51 @@ section {
   line-height: 1.6; 
 }
 
+#testimonials { 
+  padding-bottom: 40px; 
+}
+.testi-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 20px; margin-top: 40px; 
+}
+.testi-card {
+  background: var(--card-bg); 
+  border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: all var(--transition);
+}
+.testi-card:hover { 
+  border-color: var(--pink); 
+  transform: translateY(-3px); 
+}
+.stars { 
+  color: var(--peach); font-size: 1rem; 
+  margin-bottom: 12px; 
+}
+.testi-text { 
+  font-size: .9rem; line-height: 1.7; 
+  color: var(--muted); font-style: italic; 
+  margin-bottom: 16px; 
+}
+.testi-author { 
+  display: flex; align-items: center; gap: 10px; 
+}
+.testi-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--peach));
+  display: flex; align-items: center; 
+  justify-content: center;
+  font-size: .8rem; font-weight: 600; color: #fff;
+  flex-shrink: 0;
+}
+.testi-name { 
+  font-size: .85rem; font-weight: 500; 
+}
+.testi-tag { 
+  font-size: .72rem; color: var(--muted); 
+}
+
 .modal-overlay {
   position: fixed; 
   inset: 0; z-index: 2000;
