@@ -349,6 +349,56 @@ section {
   font-size: 1.1rem; color: var(--pink-dark); 
 }
 
+#estimator { 
+  padding-bottom: 60px; 
+}
+.estimator-card {
+  background: var(--card-bg); 
+  border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 40px 44px;
+  position: relative; overflow: hidden;
+}
+.estimator-card::before {
+  content: '✿'; position: absolute; right: 40px; top: 30px;
+  font-size: 6rem; opacity: .05; pointer-events: none;
+}
+.est-grid { 
+  display: grid; grid-template-columns: 1fr 1fr 1fr; 
+  gap: 24px; margin: 28px 0; 
+}
+.est-group label { 
+  display: block; font-size: .8rem; 
+  font-weight: 500; margin-bottom: 8px; 
+  color: var(--muted); text-transform: uppercase; 
+  letter-spacing: .06em; 
+}
+.est-group select, .est-group input {
+  width: 100%; padding: 10px 14px; border-radius: 10px;
+  border: 1.5px solid var(--border); 
+  background: var(--cream);
+  color: var(--text); 
+  font-family: 'DM Sans', sans-serif; 
+  font-size: .9rem;
+  transition: border var(--transition);
+}
+.est-group select:focus, .est-group input:focus { 
+  outline: none; border-color: var(--pink); 
+}
+.est-result {
+  background: linear-gradient(135deg, rgba(242,167,184,.15), rgba(247,197,160,.1));
+  border: 1.5px solid var(--border); border-radius: 12px;
+  padding: 20px 24px; display: flex; 
+  align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.est-price { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 2rem; color: var(--pink-dark); 
+}
+.est-note { 
+  font-size: .8rem; color: var(--muted);
+}
+
 .modal-overlay {
   position: fixed; inset: 0; z-index: 2000;
   background: rgba(46,32,37,.6); 
