@@ -171,6 +171,24 @@ function toggleFaq(btn) {
   }
 }
 
+function submitForm(e) {
+  e.preventDefault();
+
+  const name = $('#f-name').val().trim();
+
+  if (!name) {
+    showToast('Isi nama dulu ya 🌸');
+    return;
+  }
+
+  $('#notif').addClass('show');
+  showToast(`Terima kasih ${name} 💐`);
+
+  setTimeout(() => $('#notif').removeClass('show'), 5000);
+
+  e.target.reset();
+}
+
 function animateCounter(id, target, suffix = '') {
   let start = 0;
 
