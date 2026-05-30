@@ -900,3 +900,38 @@ footer span {
   padding: 4px 12px; 
   font-size: .75rem; 
 }
+
+@media (max-width: 768px) {
+  .about-grid, #contact .inner { 
+    grid-template-columns: 1fr; 
+  }
+  .steps { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  .est-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .form-row { 
+    grid-template-columns: 1fr; 
+  }
+  .nav-links {
+    display: none; position: fixed; top: 0; 
+    left: 0; right: 0; bottom: 0;
+    background: var(--cream); flex-direction: column;
+    justify-content: center; align-items: center; 
+    gap: 30px;
+    font-size: 1.2rem; z-index: 999;
+  }
+  .nav-links.open { 
+    display: flex; 
+  }
+  .hamburger { 
+    display: flex; z-index: 1001; 
+  }
+}
+@media (max-width: 480px) {
+  .steps { grid-template-columns: 1fr; }
+  section { padding: 60px 16px; }
+  .hero-flowers { gap: 6px; }
+  .flower-pill { padding: 6px 12px; font-size: .72rem; }
+}

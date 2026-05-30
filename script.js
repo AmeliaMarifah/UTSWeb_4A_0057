@@ -249,3 +249,34 @@ $(window).on('scroll', function () {
   $('#navbar').toggleClass('scrolled',
     window.scrollY > 40);
 });
+
+$(document).ready(function () {
+  renderProducts();
+
+  const aboutSection = $('#about')[0];
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter('counter-orders', 5280, '+');
+        animateCounter('counter-happy', 4900, '+');
+        animateCounter('counter-cities', 27);
+        animateCounter('counter-years', 4);
+
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (aboutSection) {
+    observer.observe(aboutSection);
+  }
+
+  $(document).on('click', '.product-card', function () {
+    const id = $(this).data('id');
+
+    const product = products.find(p => p.id == id);
+
+    openModal(product);
+  });
+});
