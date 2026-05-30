@@ -107,6 +107,7 @@ function openModal(product) {
   $('#m-cat').text(product.cat.toUpperCase());
   $('#m-price').text(product.price);
   $('#m-desc').text(product.desc);
+
   $('#m-tags').html(
     product.tags.map(t => `<span>${t}</span>`).join('')
   );
@@ -132,9 +133,11 @@ function orderProduct() {
   $('#f-need').val(
     cat.charAt(0).toUpperCase() + cat.slice(1)
   );
+
   $('#f-msg').val(
     `Halo! Saya ingin pesan "${currentProduct?.name}".`
   );
+
   $('#contact')[0].scrollIntoView({
     behavior: 'smooth'
   });
@@ -246,8 +249,10 @@ function showToast(msg) {
 }
 
 $(window).on('scroll', function () {
-  $('#navbar').toggleClass('scrolled',
-    window.scrollY > 40);
+  $('#navbar').toggleClass(
+    'scrolled',
+    window.scrollY > 40
+  );
 });
 
 $(document).ready(function () {
