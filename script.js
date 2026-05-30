@@ -88,7 +88,6 @@ function renderProducts(cat = 'all') {
         </div>
       </div>
     `;
-
     $('#products-grid').append(card);
   });
 }
@@ -96,7 +95,6 @@ function renderProducts(cat = 'all') {
 function filterProducts(cat, btn) {
   $('.filter-btn').removeClass('active');
   $(btn).addClass('active');
-
   renderProducts(cat);
 }
 
@@ -108,13 +106,10 @@ function openModal(product) {
   $('#m-cat').text(product.cat.toUpperCase());
   $('#m-price').text(product.price);
   $('#m-desc').text(product.desc);
-
   $('#m-tags').html(
     product.tags.map(t => `<span>${t}</span>`).join('')
   );
-
   $('#modal').addClass('active');
-
   $('body').css('overflow', 'hidden');
 }
 
@@ -133,18 +128,38 @@ function orderProduct() {
   closeModalDirect();
 
   const cat = currentProduct?.cat || '';
-
   $('#f-need').val(
     cat.charAt(0).toUpperCase() + cat.slice(1)
   );
-
   $('#f-msg').val(
     `Halo! Saya ingin pesan "${currentProduct?.name}".`
   );
-
   $('#contact')[0].scrollIntoView({
     behavior: 'smooth'
   });
+}
+
+function calcEstimate() {
+  const flowerMult = parseFloat($('#est-flower').val());
+  const sizeBase = parseInt($('#est-size').val());
+  const extra = parseInt($('#est-extra').val());
+  const total =
+    Math.round((sizeBase * flowerMult + extra) / 1000) * 1000;
+  $('#est-price').text(
+    'Rp ' + total.toLocaleString('id-ID')
+  );
+}
+
+function orderFromEstimator() {
+  const price = $('#est-price').text();
+
+  $('#f-msg').val(
+    `Saya ingin custom order dengan estimasi ${price}`
+  );
+  $('#contact')[0].scrollIntoView({
+    behavior: 'smooth'
+  });
+  showToast('Detail estimasi berhasil dikirim 🌸');
 }
 
 function animateCounter(id, target, suffix = '') {
@@ -168,7 +183,6 @@ function animateCounter(id, target, suffix = '') {
 function toggleMenu() {
   $('#nav-links').toggleClass('open');
 }
-
 $(window).on('scroll', function () {
   $('#navbar').toggleClass('scrolled',
     window.scrollY > 40);
