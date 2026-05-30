@@ -791,6 +791,27 @@ footer span {
   color: var(--pink); 
 }
 
+#toast {
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
+  z-index: 9999;
+  background: var(--text); 
+  color: var(--cream);
+  border-radius: 12px; 
+  padding: 14px 22px;
+  font-size: .85rem; 
+  font-weight: 500;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all .4s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+#toast.show { 
+  transform: none; 
+  opacity: 1; 
+}
+
 .modal-overlay {
   position: fixed; 
   inset: 0; 

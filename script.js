@@ -64,6 +64,7 @@ const products = [
 ];
 
 let currentProduct = null;
+let isDark = false;
 
 function renderProducts(cat = 'all') {
   $('#products-grid').html('');
@@ -207,9 +208,43 @@ function animateCounter(id, target, suffix = '') {
   }, 16);
 }
 
+function toggleTheme() {
+  isDark = !isDark;
+
+  $('body').attr(
+    'data-theme',
+    isDark ? 'dark' : ''
+  );
+
+  $('#toggle-theme').text(
+    isDark ? '☀️ Light' : '🌙 Dark'
+  );
+
+  showToast(
+    isDark
+      ? 'Dark mode aktif 🌙'
+      : 'Light mode aktif ☀️'
+  );
+}
+
 function toggleMenu() {
   $('#nav-links').toggleClass('open');
 }
+
+function scrollToSection(selector) {
+  $(selector)[0].scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+function showToast(msg) {
+  $('#toast').text(msg).addClass('show');
+
+  setTimeout(() => {
+    $('#toast').removeClass('show');
+  }, 3000);
+}
+
 $(window).on('scroll', function () {
   $('#navbar').toggleClass('scrolled',
     window.scrollY > 40);
