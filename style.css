@@ -677,6 +677,120 @@ section {
   padding-bottom: 16px; 
 }
 
+#contact {
+  background: linear-gradient(135deg, rgba(242,167,184,.12), rgba(247,197,160,.08));
+  border-top: 1px solid var(--border); 
+  border-bottom: 1px solid var(--border);
+  max-width: 100%; 
+  padding: 80px 24px;
+}
+#contact .inner {
+  max-width: 1100px; 
+  margin: 0 auto;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 60px; 
+  align-items: start;
+}
+.contact-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px; 
+}
+.form-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 14px; 
+}
+.form-field { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+}
+.form-field label { 
+  font-size: .78rem; 
+  font-weight: 500; 
+  color: var(--muted); 
+  text-transform: uppercase; 
+  letter-spacing: .06em; 
+}
+.form-field input, .form-field textarea, .form-field select {
+  padding: 11px 14px; 
+  border-radius: 10px;
+  border: 1.5px solid var(--border); 
+  background: var(--card-bg);
+  color: var(--text); 
+  font-family: 'DM Sans', sans-serif; 
+  font-size: .9rem;
+  transition: border var(--transition);
+}
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus { 
+  outline: none; 
+  border-color: var(--pink);
+}
+.form-field textarea { 
+  resize: vertical; 
+  min-height: 100px;
+}
+#notif {
+  display: none; 
+  padding: 12px 16px; 
+  border-radius: 10px;
+  background: rgba(181,201,177,.2); 
+  border: 1px solid var(--sage);
+  color: var(--text); 
+  font-size: .85rem; 
+  align-items: center; 
+  gap: 8px;
+}
+#notif.show { 
+  display: flex; 
+}
+.contact-info h3 { 
+  font-size: 1.4rem; 
+  margin-bottom: 16px; 
+}
+.contact-info p { 
+  color: var(--muted); 
+  font-size: .9rem; 
+  line-height: 1.7; 
+  margin-bottom: 24px; 
+}
+.contact-items { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px; 
+}
+.contact-item { 
+  display: flex; 
+  gap: 12px; 
+  align-items: flex-start; 
+}
+.contact-icon { 
+  font-size: 1.2rem; 
+  padding-top: 2px; 
+}
+.contact-detail strong { 
+  display: block; 
+  font-size: .85rem; 
+  font-weight: 500; 
+}
+.contact-detail span { 
+  font-size: .82rem; 
+  color: var(--muted); 
+}
+
+footer {
+  text-align: center; 
+  padding: 28px 24px;
+  font-size: .78rem; 
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+footer span { 
+  color: var(--pink); 
+}
+
 .modal-overlay {
   position: fixed; 
   inset: 0; 
