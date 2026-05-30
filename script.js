@@ -162,6 +162,15 @@ function orderFromEstimator() {
   showToast('Detail estimasi berhasil dikirim 🌸');
 }
 
+function toggleFaq(btn) {
+  const item = $(btn).closest('.faq-item');
+
+  $('.faq-item').removeClass('open');
+  if (!item.hasClass('open')) {
+    item.addClass('open');
+  }
+}
+
 function animateCounter(id, target, suffix = '') {
   let start = 0;
 
