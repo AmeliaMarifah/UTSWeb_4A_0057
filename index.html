@@ -105,6 +105,59 @@
   <div class="products-grid" id="products-grid"></div>
 </section>
 
+<section id="estimator">
+  <span class="section-label">Kalkulator Harga</span>
+  <h2 class="section-title">Estimasi Harga<br>Custom Order</h2>
+  <p class="section-sub" style="margin-bottom:28px">
+    Sesuaikan buket impianmu dan lihat estimasi harga secara langsung.
+  </p>
+  <div class="estimator-card">
+    <div class="est-grid">
+      <div class="est-group">
+        <label>Jenis Bunga</label>
+        <select id="est-flower" onchange="calcEstimate()">
+          <option value="1">Bunga Kertas (Dasar)</option>
+          <option value="1.5">Mawar Lokal</option>
+          <option value="2">Mawar Impor</option>
+          <option value="2.5">Tulip Premium</option>
+          <option value="3">Lily Eksotis</option>
+        </select>
+      </div>
+      <div class="est-group">
+        <label>Ukuran Buket</label>
+        <select id="est-size" onchange="calcEstimate()">
+          <option value="50000">Mini (Ø 20cm)</option>
+          <option value="80000" selected>Standar (Ø 30cm)</option>
+          <option value="130000">Large (Ø 40cm)</option>
+          <option value="200000">Grand (Ø 50cm)</option>
+        </select>
+      </div>
+      <div class="est-group">
+        <label>Tambahan</label>
+        <select id="est-extra" onchange="calcEstimate()">
+          <option value="0">Tidak ada</option>
+          <option value="15000">Pita Satin</option>
+          <option value="25000">Kartu Ucapan</option>
+          <option value="45000">Pita + Kartu + Cokelat</option>
+          <option value="75000">Paket Lengkap Premium</option>
+        </select>
+      </div>
+    </div>
+    <div class="est-result">
+      <div>
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:4px">ESTIMASI HARGA</div>
+        <div class="est-price" id="est-price">Rp 80.000</div>
+      </div>
+      <div style="text-align:right">
+        <div class="est-note">*Harga dapat berubah sesuai ketersediaan bunga</div>
+        <button class="btn-primary-pp" style="margin-top:12px" onclick="orderFromEstimator()">
+          Pesan Sekarang →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModalDirect()">✕</button>
